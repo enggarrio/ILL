@@ -19,42 +19,59 @@
   <body class="bg-light">
 
     <div class="container">
-      <div class="py-2 text-center">
+      <div class="py-5 text-center">
         <img src="img/img1.jpg" style="height: 400px;">
         <br>
         <h2>History of Modern Architecture</h2>
         <p class="lead">Buku ini adalah buku yang membahas tentang arsitektur</p>
       </div>
 
-      <div class="col-md-4"></div>
+      <div class="row">
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Form Peminjaman</h4>
+          <form class="needs-validation" novalidate action="konfirmasi.html">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nama peminjam</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Julian EPP" value="" required disabled>
+                <div class="invalid-feedback">
+                  Valid name is required.
+                </div>
+              </div>
+            </div>
 
-      <div class="py-2 text-left col-md-4">
-        <table>
-          <tr>
-            <th>Judul</th>
-            <td> : </td>
-            <td>History of Modern Architecture</td>
-          </tr>
-          <tr>
-            <th>Penulis</th>
-            <td> : </td>
-            <td>Richard Philips</td>
-          </tr>
-          <tr>
-            <th>Tahun Terbit</th>
-            <td> : </td>
-            <td>2010</td>
-          </tr>
-          <tr>
-            <th>Penerbit</th>
-            <td> : </td>
-            <td>Gramedia</td>
-          </tr>
-        </table>
-      </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="username">Judul buku</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="judul" placeholder="Modern Architecture" required disabled>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Your username is required.
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div class="py-2 text-center">
-        <a href="pinjam.html"><button class="btn btn-primary">Pinjam buku ini</button></a>
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Tanggal Pinjam</label>
+                <input type="text" class="form-control" id="tgl-pinjam" placeholder="01 / 04 / 2018" required disabled>
+                <div class="invalid-feedback">
+                  Please select a valid date.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Tanggal Kembali</label>
+                <input type="date" class="form-control" id="tgl-kembali" placeholder="dd/mm/yyyy" required>
+                <div class="invalid-feedback">
+                  Please select a valid date.
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Terima Peminjaman</button>
+          </form>
+        </div>
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
